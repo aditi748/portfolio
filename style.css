@@ -6,6 +6,7 @@
 }
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -43,13 +44,12 @@ body {
 }
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 8rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.168);
-  background: none;
 }
 .nav-ul {
   list-style: none;
@@ -65,14 +65,18 @@ body {
   padding-bottom: 0.3rem;
 }
 .nav-ul a:hover{
-    border-bottom: 2px solid navy;
+    border-bottom: 2px solid #000080;
+}
+.icons{
+  display: flex;
+  gap: 3rem;
 }
 .hero {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   gap: 5rem;
-  height: 43rem;
+  height: 44rem;
 }
 .hero-text {
   display: flex;
@@ -80,24 +84,36 @@ body {
   justify-content: center;
   text-align: justify;
   width: 38rem;
+  height: 100%;
+  background-image: url(./assets/blue-circle-1.png);
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 170%;
+  background-repeat: no-repeat;
 }
 .hero-text h2 {
   font-weight: 600;
   font-size: 2.4rem;
   color: #5874be;
+  padding-bottom: 1rem;
 }
 .hero-text h1 {
+  line-height: 0.9;
   color: #18244cda;
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 900;
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  font-family: 'Paytone One', sans-serif;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #18244cda;
 }
 .hero-text p {
-  font-size: 1.3rem;
+  color: #485d99;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 .hero-img {
   height: 100%;
-  width: 600px;
   display: flex;
   align-items: center;
 }
@@ -198,6 +214,10 @@ li[class="list-2"] {
   margin-bottom: 1rem;
 }
 
+
+
+
+
 .container-3 {
   background-color: #effafc;
   height: fit-content;
@@ -248,6 +268,7 @@ li[class="list-2"] {
   border-radius: 50px;
   overflow: hidden;
   position: relative;
+  
 }
 .progress-container-1 > .progress-bar{
     width: 81%; 
@@ -260,17 +281,29 @@ li[class="list-2"] {
 }
 .progress-bar {
   height: 100%;
-  background-color: #007bff;
+  background-color: #007bffbc;
   border-radius: 50px;
-  transition: width 0.3s ease;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
+.sub-list-b:hover{
+  .progress-bar{
+    
+    animation: progress 0.8s 1;
+  }
+}
+@keyframes progress {
+            from {
+                width: 50px;
+            }
+        }
 
 .progress-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: navy;
   font-weight: bold;
 }
 .skills-text {
@@ -414,9 +447,13 @@ li[class="list-2"] {
   justify-content: end;
 }
 .projects-text-ul-1 .sub-list-c {
-  background-color:#c6eaea;
+  background-color: #c6eaea;
+  box-shadow: 4px 4px 10px rgba(51, 103, 125, 0.3);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
   padding: 2rem;
-  border-radius: 1rem;
 }
 .projects-text-ul-1 .sub-list-1-c,
 .projects-text-ul-1 .sub-list-2-c {
@@ -577,6 +614,8 @@ li[class="list-2"] {
     gap: 1rem;
     background-color:#effafc;
     border-radius: 1rem;
+    box-shadow: 4px 4px 10px rgba(51, 103, 125, 0.3);
+  padding: 1rem;
 }
 .contact-text-1{
     display: flex;
@@ -627,6 +666,10 @@ input::placeholder{
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.245);
   font-family: "Montserrat", sans-serif;
+}
+.contact-img img{
+  border-radius: 50%;
+  width: 100%;
 }
 
 
